@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wcg.bluebeam.ocr.21</id>
+    <version>21.3.0</version>
+    <title>Bluebeam OCR 64-bit 21</title>
+    <authors>Bluebeam, Inc.</authors>
+    <owners>John Rogers</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Revu® offers powerful, highly customizable document management, markup and automation tools with a built-in collaboration space, Studio.</description>
+    <summary>Blue Revu OCR - Offline installer</summary>
+    <tags>bluebeam</tags>
+    <releaseNotes>See https://support.bluebeam.com/en-us/release-notes-all.html</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2017" version="14.16.27033" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
