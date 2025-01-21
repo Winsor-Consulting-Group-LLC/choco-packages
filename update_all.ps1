@@ -34,7 +34,7 @@ $Options = [ordered]@{
     #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
     #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
     
-    #NoCheckChocoVersion = $true                            #Turn on this switch for all packages
+    NoCheckChocoVersion = $true                            #Turn on this switch for all packages
 
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
@@ -55,21 +55,21 @@ $Options = [ordered]@{
         Path = "$PSScriptRoot\Update-History.md"            #Path where to save history
     }
 
-    Gist = @{
-        Id     = $Env:gist_id                               #Your gist id; leave empty for new private or anonymous gist
-        ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
-        Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"       #List of files to add to the gist
-    }
+    # Gist = @{
+    #     Id     = $Env:gist_id                               #Your gist id; leave empty for new private or anonymous gist
+    #     ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
+    #     Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"       #List of files to add to the gist
+    # }
 
-    Git = @{
-        User     = ''                                       #Git username, leave empty if github api key is used
-        Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
-    }
+    # Git = @{
+    #     User     = ''                                       #Git username, leave empty if github api key is used
+    #     Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
+    # }
 
-    GitReleases  = @{
-        ApiToken    = $Env:github_api_key                   #Your github api key
-        ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
-    }
+    # GitReleases  = @{
+    #     ApiToken    = $Env:github_api_key                   #Your github api key
+    #     ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
+    # }
 
     RunInfo = @{
         Exclude = 'password', 'apikey', 'apitoken'          #Option keys which contain those words will be removed
